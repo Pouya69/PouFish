@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Instagram login Form</title>
+        <!-- External css -->
+        <link rel="stylesheet" href="{%static 'styles/style.css' %}">
+        <!-- Font awesome link -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    
+    
+    </head>
+<body>
+    <center><h3>DjnBoT</h3>
+    <img src="{%static 'images/insta.png' %}" alt="insta-logo" style="height:50px;width:50px" >
+    <div class="mns">
+    	<p style="font-size:15px;font-style:bold;margin-top:2.5rem;">Please login to continue</p>
+    </div>
+    </center>
+    
+<div id="wrapper">
+    <div class="container">
+        <div class="phone-app-demo"></div>
+        <div class="form-data">
+            <form action="login" method='post'>
+                <div class="logo">
+                    <h1>Instagram.</h1>
+                </div>
+                {% csrf_token %}
+                Username : <input type="text" name="username"><br>
+                Password : <input type="password" name="password"><br>
+                <button class="form-btn" type="submit">Log in</button>
+            </form>
+        </div>
+    </div>
+</div>
+{%block content%}
+
+
+{%endblock%}
+
+
+</body>
+</html>
+
+
